@@ -14,36 +14,30 @@ let textResult = document.querySelector('p');
 
 /*Funzione random number*/
 function randomNumber(min, max) {
+    const parse = parseInt(min, max);
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
 /*Somma e verifica */
 function sumRandomNumbers()
 {
-    let numberUser = numberInput.value;
-    let numberOddEven = evenOrOdd.value;
-    //
-    console.log( "numberUser = " + numberUser);
-    console.log( "numberOddEven = " + numberOddEven);
-
-    // sommo il numero inserito con il numero random del computer
-    let numberRandom = randomNumber(1,5);
-    console.log( "numberRandom = " + numberRandom);
-
-    let somma = numberUser + numberRandom;
-    console.log( "sommauser_random = " + somma );
-    
+    let numberRandom1 = randomNumber(1,5);
+    let numberRandom2 = randomNumber(1,5);
+    console.log(`numero user: ` + numberRandom1, `numero computer: ` + numberRandom2);
+    let somma = 0;
+    somma = numberRandom1 + numberRandom2;
+    console.log(somma);
 
     // Stabilisco se la somma dei due numeri è pari o dispari e verifico chi ha vinto tramite ciclo if
-    if((somma % 2) === 0 && numberOddEven === 'even' ){
-        textResult.innerHTML = "You Win! Try Again";
+    if((somma % 2) == 0 ){
+        document.write("You: " + numberRandom1 + " Computer: " + numberRandom2 + " " + " somma: " + somma + " " + "-> You win the match" + "<br>" + "press F5 to refresh");
         //console.log('true');
         return true;
        
     } 
-    else if ((somma % 2) === 0 && numberOddEven === 'odd' ) {
+    else if ((somma % 2) != 0 ) {
         //console.log('false');
-        textResult.innerHTML = "You Lost! Try Again";
+        document.write("You: " + numberRandom1 + " Computer: " + numberRandom2 + " " + " somma: " + somma + " " + " -> You lost the match" + "<br>" + "press F5 to refresh");
         return false;
     }
 }
