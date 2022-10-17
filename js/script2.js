@@ -6,11 +6,13 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto
  */
 
-
+/*
 let evenOrOdd = document.getElementById('numberOddEven');
 let numberInput = document.getElementById('numberInput');
-let btn = document.querySelector('button');
 let textResult = document.querySelector('p');
+*/
+
+let btn = document.querySelector('button');
 
 /*Funzione random number*/
 function randomNumber(min, max) {
@@ -31,14 +33,11 @@ function sumRandomNumbers()
     // Stabilisco se la somma dei due numeri è pari o dispari e verifico chi ha vinto tramite ciclo if
     if((somma % 2) == 0 ){
         document.write("You: " + numberRandom1 + " Computer: " + numberRandom2 + " " + " somma: " + somma + " " + "-> You win the match" + "<br>" + "press F5 to refresh");
-        //console.log('true');
-        return true;
-       
+        //console.log('true');       
     } 
     else if ((somma % 2) != 0 ) {
         //console.log('false');
         document.write("You: " + numberRandom1 + " Computer: " + numberRandom2 + " " + " somma: " + somma + " " + " -> You lost the match" + "<br>" + "press F5 to refresh");
-        return false;
     }
 }
 

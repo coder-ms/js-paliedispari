@@ -29,8 +29,8 @@ function palidroma(word, arrayWord, arrayReverseWord, reverseWord){
         testo.innerHTML= 'è palindroma';
     }
     else if(word != reverseWord) {
-        console.log('non palindroma'),
-        testo.innerHTML= 'non è palindroma'
+        console.log('non palindroma');
+        testo.innerHTML= 'non è palindroma';
     }
 
 }
